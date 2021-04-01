@@ -10,7 +10,7 @@ IS_SETUP=$(grep 'IS_SETUP' .env | cut -d '=' -f2 | tr -d '"')
 if [ -z "$IS_SETUP" ]
 then
     # Install the required Python libs
-    pip install -r requirement.txt
+    python -m pip install -r requirement.txt
 
     # Setup the application
     python3 manage.py migrate
