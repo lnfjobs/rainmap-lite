@@ -5,6 +5,6 @@ RUN python3 -m pip install lxml
 RUN python3 -m pip install Django
 RUN git clone https://github.com/lnfjobs/rainmap-lite
 WORKDIR /rainmap-lite/rainmap-lite/
-ADD  run.sh /rainmap-lite/rainmap-lite/run.sh
-RUN chmod 777 /rainmap-lite/rainmap-lite/run.sh
+ADD  run.sh /rainmap-lite/run.sh
+RUN chmod 777 /rainmap-lite/run.sh
 CMD ./run.sh
