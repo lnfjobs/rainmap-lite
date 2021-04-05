@@ -15,7 +15,7 @@ sed -i "s/smtp.gmail.com/$smtp/g" "nmaper-cronjob.py"
 python manage.py migrate
 python manage.py loaddata nmapprofiles
 python manage.py createsuperuser
-python manage.py runserver 0.0.0.0:8080 &
+python manage.py runserver 127.0.0.1:8080 &
 while true
 do
 python nmaper-cronjob.py
