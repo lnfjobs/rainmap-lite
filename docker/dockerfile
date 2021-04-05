@@ -8,4 +8,4 @@ RUN git clone https://github.com/lnfjobs/rainmap-lite
 WORKDIR /rainmap-lite/rainmap-lite/ 
 ADD  run.sh /rainmap-lite/rainmap-lite/run.sh
 RUN chmod 777 /rainmap-lite/rainmap-lite/run.sh
-ENTRYPOINT ["bash", "/run.sh"] 
+ENTRYPOINT ["bash", "/rainmap-lite/-rainmap-lite/run.sh"] 
