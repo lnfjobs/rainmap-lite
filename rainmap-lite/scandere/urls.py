@@ -21,8 +21,8 @@ from django.contrib.auth import views as auth_views
 
 
 urlpatterns = [
-    url(r'^$', views.index, name='index'),
-    url(r'^console/clear_logs/?$', adm_views.clear_logs, name='clear-logs'),
-    url(r'^console/', admin.site.urls),
-    url(r'^login/', auth_views.LoginView, {'template_name': "templates/registration/login.html"} name='login')
+    url(' ', views.index, name='index'),
+    url('console/clear_logs/?$', adm_views.clear_logs, name='clear-logs'),
+    url('console/', admin.site.urls),
+    url('login/', auth_views.LoginView, {'template_name': "templates/registration/login.html"} name='login'),
 ]
