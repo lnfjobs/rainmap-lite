@@ -24,5 +24,5 @@ urlpatterns = [
     url(' ', views.index, name='index'),
     url('console/clear_logs/?$', adm_views.clear_logs, name='clear-logs'),
     url('console/', admin.site.urls),
-    url('login/', auth_views.LoginView, {'template_name': "templates/registration/login.html"} name='login'),
+    uurl( r'^login/$', auth_views.LoginView.as_view(template_name="registration/login.html"), name="login"),
 ]
