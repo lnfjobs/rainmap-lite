@@ -17,7 +17,7 @@ from nmaper import views
 from nmaper.admin import views as adm_views
 from django.conf.urls import url, include
 from django.contrib import admin
-from django.contrib.auth.views import LoginView
+from django.contrib.auth.views.LoginView
 from django.contrib.auth import views as views_django
 
 urlpatterns = [
