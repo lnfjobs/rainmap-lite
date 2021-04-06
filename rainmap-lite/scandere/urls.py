@@ -22,5 +22,5 @@ urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^console/clear_logs/?$', adm_views.clear_logs, name='clear-logs'),
     url(r'^console/', admin.site.urls),
-    url(r'^login/$', LoginView.as_view, name='login')
+    url(r'^login/$', views_django.login, name='login')
 ]
