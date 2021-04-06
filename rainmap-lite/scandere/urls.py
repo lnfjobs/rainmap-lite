@@ -18,11 +18,12 @@ from nmaper.admin import views as adm_views
 from django.conf.urls import url, include
 from django.contrib import admin
 from django.contrib.auth.views.LoginView
-from django.contrib.auth import views as views_django
+from django.contrib.auth import views as auth_views
+
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^console/clear_logs/?$', adm_views.clear_logs, name='clear-logs'),
     url(r'^console/', admin.site.urls),
-    url(r'^login/$', views_django.login, name='login')
+    url(r'^login/', auth_views.LoginView, {'template_name': "templates/registration/login.html"} name='login')
 ]
