@@ -35,5 +35,5 @@ def index(request):
         else:
             context['popup_message'] = f.errors
 
-    return HttpResponse(template.render(context, request))
+    return render(template.render(context, request))
 
