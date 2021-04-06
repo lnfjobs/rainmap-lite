@@ -24,4 +24,4 @@ urlpatterns = [
     #url( r'^$', views.index(template_name="templates/index.html"), name="index"),
     url('console/clear_logs/?$', adm_views.clear_logs, name='clear-logs'),
     url('console/', admin.site.urls),
-    url( r'^$', auth_views.LoginView.as_view(template_name="registration/login.html"), context='next': '/templates/index.html', name="login"),]
+    url( r'^$', auth_views.LoginView.as_view(template_name="registration/login.html"), {'extra_context': {'next': '/templates/index.html'}} name="login"),]
